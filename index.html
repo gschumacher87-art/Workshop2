@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schumacher Automotive</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+<div class="sidebar-header">Schumacher Automotive</div>
+<ul>
+<li class="active" data-tab="dashboard">Dashboard</li>
+<li data-tab="calendar">Calendar</li>
+<li data-tab="customers">Customers</li>
+<li data-tab="jobs">Jobs</li>
+<li data-tab="invoices">Invoices</li>
+<li data-tab="repairs">Repairs</li>
+<li data-tab="parts">Parts</li>
+<li data-tab="technicians">Technicians</li>
+</ul>
+</aside>
+
+<main class="main">
+
+<section id="dashboard" class="section"></section>
+
+<section id="calendar" class="section hidden">
+<div class="calendar-header">
+<button id="prevMonth">&lt;</button>
+<span id="monthYear"></span>
+<button id="nextMonth">&gt;</button>
+</div>
+<table id="calendarTable"><tbody></tbody></table>
+<div id="dayView"></div>
+</section>
+
+<section id="customers" class="section hidden">
+<button id="addCustomerBtn">Add Customer</button>
+<div id="customersList"></div>
+</section>
+
+<section id="jobs" class="section hidden">
+<div id="availableTechs"></div>
+<div id="jobsUnassigned"></div>
+<div id="jobsActive"></div>
+</section>
+
+<section id="invoices" class="section hidden">
+<div id="jobsFinished"></div>
+<div id="invoicesList"></div>
+</section>
+
+<section id="repairs" class="section hidden">
+<button id="addRepairBtn">Add Repair</button>
+<ul id="repairsList"></ul>
+</section>
+
+<section id="parts" class="section hidden">
+<button id="addPartBtn">Add Part</button>
+<ul id="partsList"></ul>
+</section>
+
+<section id="technicians" class="section hidden">
+<button id="addTechnicianBtn">Add Technician</button>
+<ul id="techniciansList"></ul>
+</section>
+
+</main>
+</div>
+
+<div id="modal" class="modal hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
